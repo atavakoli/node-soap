@@ -52,11 +52,12 @@ test.service = {
             if (err) {
               cb.fault({
                 Fault: {
-                Code: {
-                  Value: "soap:Sender",
-                  Subcode: { value: "rpc:BadArguments" }
-                },
-                Reason: { Text: err.message }
+                  Code: {
+                    Value: "soap:Sender",
+                    Subcode: { value: "rpc:BadArguments" }
+                  },
+                  Reason: { Text: err.message }
+                }
               });
             } else {
               cb(price);
